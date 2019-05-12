@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainWindow.MainWindowController">
+   <children>
+      <TableView fx:id="TableView" layoutX="164.0" prefHeight="463.0" prefWidth="806.0" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="movieColum" prefWidth="339.0" text="Movie" />
+          <TableColumn fx:id="categoryColum" minWidth="0.0" prefWidth="163.0" text="Category" />
+            <TableColumn fx:id="lengthColum" prefWidth="108.0" text="Length" />
+            <TableColumn fx:id="ratingColum" minWidth="6.0" prefWidth="70.0" text="Rating" />
+            <TableColumn fx:id="yearColum" prefWidth="57.0" text="Year" />
+            <TableColumn fx:id="seenColum" minWidth="0.0" prefWidth="64.0" text="Seen" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="AddNewMovie" buttonType="RAISED" layoutX="16.0" layoutY="167.0" onAction="#AddNewMovieButtonPressed" prefHeight="28.0" prefWidth="139.0" ripplerFill="#eb1a1a" style="-fx-background-color: #D2D2D2;" text="Add" AnchorPane.leftAnchor="16.0" />
+      <TextField fx:id="movieName" layoutX="175.0" layoutY="480.0" prefHeight="25.0" prefWidth="130.0" promptText="Movie name" AnchorPane.bottomAnchor="7.0">
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" />
+         </padding></TextField>
+      <TextField fx:id="categoryMovie" layoutX="315.0" layoutY="480.0" prefHeight="25.0" prefWidth="130.0" promptText="Category" AnchorPane.bottomAnchor="7.0">
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" />
+         </padding></TextField>
+      <TextField fx:id="lengthMovie" layoutX="454.0" layoutY="480.0" prefHeight="25.0" prefWidth="130.0" promptText="Length" AnchorPane.bottomAnchor="7.0">
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" />
+         </padding></TextField>
+      <TextField fx:id="ratingMovie" layoutX="593.0" layoutY="480.0" prefHeight="25.0" prefWidth="130.0" promptText="Rating" AnchorPane.bottomAnchor="7.0">
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" />
+         </padding></TextField>
+      <ComboBox fx:id="yearMovie" layoutX="730.0" layoutY="480.0" prefHeight="25.0" prefWidth="130.0" promptText="Year" AnchorPane.bottomAnchor="7.0">
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" />
+         </padding>
+      </ComboBox>
+      <CheckBox fx:id="seenMovie" layoutX="868.0" layoutY="480.0" prefHeight="25.0" prefWidth="130.0" text="Seen?" AnchorPane.bottomAnchor="7.0">
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </CheckBox>
+      <JFXButton fx:id="EditMovie" buttonType="RAISED" layoutX="7.0" layoutY="-47.0" prefHeight="28.0" prefWidth="139.0" ripplerFill="#eb1a1a" style="-fx-background-color: #D2D2D2;" text="Edit" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="-47.0" />
+      <JFXButton fx:id="DeleteButton" buttonType="RAISED" layoutX="14.0" layoutY="208.0" onAction="#DeleteButtonPressed" prefHeight="28.0" prefWidth="139.0" ripplerFill="#eb1a1a" style="-fx-background-color: #D2D2D2;" text="Delete" AnchorPane.leftAnchor="14.0" />
+      <Label fx:id="welcomeLabel" alignment="CENTER" layoutX="12.0" layoutY="87.0" prefHeight="17.0" prefWidth="139.0" textAlignment="CENTER" textFill="#1c8ac9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <JFXButton fx:id="BackToLoginWindow" buttonType="RAISED" layoutX="16.0" layoutY="479.0" onAction="#BackToLoginWindowButtonPressed" prefHeight="28.0" prefWidth="139.0" style="-fx-background-color: #5A5A5A;" text="Log Out" textFill="WHITE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="16.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <ImageView fitHeight="66.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="4.0">
+         <image>
+            <Image url="@../images/Film_Roll.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="72.0" fitWidth="73.0" layoutX="84.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="85.0" AnchorPane.topAnchor="4.0">
+         <image>
+            <Image url="@../images/Film_Roll_Flipped.png" />
+         </image>
+      </ImageView>
+      <Separator layoutY="471.0" prefHeight="4.0" prefWidth="163.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="0.0" />
+      <Separator layoutX="161.0" layoutY="472.0" orientation="VERTICAL" prefHeight="42.0" prefWidth="5.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="161.0" />
+      <ImageView fitHeight="66.0" fitWidth="73.0" layoutX="8.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="4.0">
+         <image>
+            <Image url="@../images/Film_Roll_Flipped_UP.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="66.0" fitWidth="73.0" layoutX="88.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="85.0">
+         <image>
+            <Image url="@../images/Film_Roll_Flipped_up2.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="SearchID" labelFloat="true" layoutX="14.0" layoutY="362.0" onKeyReleased="#search" promptText="Search" style="-fx-background-color: #E9E9E9;" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="14.0" />
+      <Label fx:id="welcomeLabel1" alignment="CENTER" layoutX="12.0" layoutY="70.0" prefHeight="17.0" prefWidth="139.0" text="Welcome" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
